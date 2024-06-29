@@ -1,7 +1,7 @@
 <?php
     session_start();
     if (!isset($_SESSION['email'])&&!isset($_SESSION['password'])) {
-        header('Location: login.php');
+        header('Location: index.php');
         exit;
     }
 
@@ -90,6 +90,7 @@
 
     <ul class="nav nav-pills">
         <li class="nav-item"><a href="main.php" class="nav-link active" aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="services.php" class="nav-link">Services</a></li>
         <li class="nav-item"><a href="#" data-bs-toggle="modal" data-bs-target="#modal1" class="nav-link">About</a></li>
         <li class="nav-item"><a href="logout.php" class="nav-link">Logout</a></li>
     </ul>
@@ -102,25 +103,6 @@
                 <p>Matthew H's Clinic is a web application that helps you manage your clinic. You can use this application to manage your patients, appointments, and more.</p>   
               </div>
             </div>
-        </div>
-
-        <div class="container mb-3">
-            <div class="row mb-2">
-              <div>
-              <h2>Search Patients</h2>
-              <form action="main.php" method="get">
-                <div class="input-group">
-                <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search by Name" aria-describedby="search-addon" name="search_query" />
-                <select class="form-select" name="search_option">
-                    <option value="name">Name</option>
-                    <option value="email">Email</option>
-                </select>
-                <button type="submit" class="btn btn-outline-primary" data-mdb-ripple-init>Search</button>
-                </div>
-              </form>
-              </div>
-            </div>
-            </div>            
         </div>
 
         <div class="container ">
@@ -199,7 +181,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <p>This web app is a demo system owned by My Clinic.</p>
+                        <p>This web app is a demo system owned by Matthew H's Clinic.</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>

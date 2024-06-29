@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->execute();
 
     echo "<script>alert('Registration Successful');</script>";
-    echo "<script>window.location.href='login.php'</script>";
+    echo "<script>window.location.href='index.php'</script>";
 }
 ?>
 
@@ -43,14 +43,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
         <a href="main.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
         <span class="fs-4 ms-4">Matthew H's Clinic</span>
         </a>
 
-        <ul class="nav nav-pills">
+        <ul class="nav nav-pills mr-2">
             <li class="nav-item"><a href="main.php" class="nav-link">Login</a></li>
-            <li class="nav-item"><a href="newpatient.php" class="nav-link active" aria-current="page">Register</a></li>
+            <li class="nav-item"><a href="register.php" class="nav-link active" aria-current="page">Register</a></li>
         </ul>
     </header>
 
